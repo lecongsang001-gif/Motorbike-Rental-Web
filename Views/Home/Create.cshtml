@@ -1,0 +1,64 @@
+﻿@model Nhom7.Models.Xe
+
+@{
+    ViewData["Title"] = "Thêm xe";
+}
+
+<h2>Thêm xe mới</h2>
+
+<form asp-action="Create" method="post">
+
+    <div class="mb-3">
+        <label asp-for="MaXe">Mã xe</label>
+        <input asp-for="MaXe" class="form-control" />
+        <span asp-validation-for="MaXe" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="TenXe">Tên xe</label>
+        <input asp-for="TenXe" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="TenHang">Tên hãng</label>
+        <input asp-for="TenHang" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="LoaiXeMay">Loại xe</label>
+        <input asp-for="LoaiXeMay" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="PhanKhoi">Phân khối</label>
+        <input asp-for="PhanKhoi"
+               type="number"
+               class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="NamSanXuat">Năm sản xuất</label>
+        <input asp-for="NamSanXuat"
+               type="number"
+               class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="MauSac">Màu sắc</label>
+        <input asp-for="MauSac" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="MaLoaiXe">Mã loại xe</label>
+        <input asp-for="MaLoaiXe" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-success">
+        Thêm xe
+    </button>
+
+    <a asp-action="Index" class="btn btn-secondary">
+        Quay lại
+    </a>
+
+</form>

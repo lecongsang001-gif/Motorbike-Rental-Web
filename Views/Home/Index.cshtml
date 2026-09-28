@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Nhom7.Models.Xe>
+
+@{
+    ViewData["Title"] = "Quản lý xe";
+}
+
+<h1>Danh sách xe máy</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">
+        + Thêm xe mới
+    </a>
+</p>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Mã xe</th>
+            <th>Tên xe</th>
+            <th>Hãng</th>
+            <th>Loại xe</th>
+            <th>Phân khối</th>
+            <th>Năm sản xuất</th>
+            <th>Màu sắc</th>
+            <th>Mã loại</th>
+            <th>Chức năng</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var xe in Model)
+        {
+            <tr>
+
+                <td>@xe.MaXe</td>
+
+                <td>@xe.TenXe</td>
+
+                <td>@xe.TenHang</td>
+
+                <td>@xe.LoaiXeMay</td>
+
+                <td>@xe.PhanKhoi cc</td>
+
+                <td>@xe.NamSanXuat</td>
+
+                <td>@xe.MauSac</td>
+
+                <td>@xe.MaLoaiXe</td>
+
+                <td>
+
+                    <a asp-action="Edit"
+                       asp-route-id="@xe.MaXe"
+                       class="btn btn-warning">
+                        Sửa
+                    </a>
+
+                    <a asp-action="Delete"
+                       asp-route-id="@xe.MaXe"
+                       class="btn btn-danger">
+                        Xóa
+                    </a>
+
+                </td>
+
+            </tr>
+        }
+
+    </tbody>
+</table>

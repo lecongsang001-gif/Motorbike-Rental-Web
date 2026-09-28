@@ -1,0 +1,112 @@
+﻿@model Nhom7.Models.Xe
+
+@{
+    ViewData["Title"] = "Sửa xe";
+}
+
+<h2>Sửa thông tin xe</h2>
+
+<form asp-action="Edit" method="post">
+
+    <div class="mb-3">
+
+        <label>Mã xe</label>
+
+        <input asp-for="MaXe"
+               class="form-control"
+               readonly />
+
+    </div>
+
+    <div class="mb-3">
+
+        <label asp-for="TenXe">
+            Tên xe
+        </label>
+
+        <input asp-for="TenXe"
+               class="form-control" />
+
+    </div>
+
+    <div class="mb-3">
+
+        <label asp-for="TenHang">
+            Tên hãng
+        </label>
+
+        <input asp-for="TenHang"
+               class="form-control" />
+
+    </div>
+
+    <div class="mb-3">
+
+        <label asp-for="LoaiXeMay">
+            Loại xe
+        </label>
+
+        <input asp-for="LoaiXeMay"
+               class="form-control" />
+
+    </div>
+
+    <div class="mb-3">
+
+        <label asp-for="PhanKhoi">
+            Phân khối
+        </label>
+
+        <input asp-for="PhanKhoi"
+               class="form-control" />
+
+    </div>
+
+    <div class="mb-3">
+
+        <label asp-for="NamSanXuat">
+            Năm sản xuất
+        </label>
+
+        <input asp-for="NamSanXuat"
+               class="form-control" />
+
+    </div>
+
+    <div class="mb-3">
+
+        <label asp-for="MauSac">
+            Màu sắc
+        </label>
+
+        <input asp-for="MauSac"
+               class="form-control" />
+
+    </div>
+
+    <div class="mb-3">
+
+        <label asp-for="MaLoaiXe">
+            Mã loại xe
+        </label>
+
+        <input asp-for="MaLoaiXe"
+               class="form-control" />
+
+    </div>
+
+    <button type="submit"
+            class="btn btn-warning">
+
+        Lưu thay đổi
+
+    </button>
+
+    <a asp-action="Index"
+       class="btn btn-secondary">
+
+        Quay lại
+
+    </a>
+
+</form>
